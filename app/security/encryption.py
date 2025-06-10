@@ -6,8 +6,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # Get encryption key from environment
-ENCRYPTION_KEY = os.getenv("ENCRYPTION_KEY")
-
+from app.config import ENCRYPTION_KEY
 # If no key in environment, generate one (for development only)
 if not ENCRYPTION_KEY:
     print("⚠️  WARNING: No ENCRYPTION_KEY found in .env file!")
